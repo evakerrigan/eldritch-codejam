@@ -118,6 +118,10 @@ console.log('5 stageArrayNormal //заполняем массивы уровне
 
   stage3Array = stage3ArrayBrown.concat(stage3ArrayBlue, stage3ArrayGreen); 
 
+  shuffle(stage1Array);
+  shuffle(stage2Array);
+  shuffle(stage3Array);
+
   stageValuesAtArray();
 
 }
@@ -525,12 +529,10 @@ for (let item of items) {
       items[i].classList.remove('active');
     }  
     item.classList.add('active');
-    //randomCards();
     getStageAndColor();
     trackerValuesAncient();
-    deck.style.backgroundImage = "url(./assets/mythicCardBackground.png)";
+    deck.style.backgroundImage = "";
     lastCard.style.backgroundImage = "";
-    //viewTrackerAtHTML();
     currentState.innerHTML = "";    
   })  
 }
@@ -548,6 +550,7 @@ for (let number of numbers) {
     difficulty();
     nullStColor();
     currentState.innerHTML = "";
+    deck.style.backgroundImage = "";
   })  
 }
 

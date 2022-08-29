@@ -65,6 +65,10 @@ function stageArrayNormal() {
 
   stage3Array = stage3ArrayBrown.concat(stage3ArrayBlue, stage3ArrayGreen); 
 
+  shuffle(stage1Array);
+  shuffle(stage2Array);
+  shuffle(stage3Array);
+
   stageValuesAtArray();
 
 }
@@ -305,7 +309,7 @@ let shuffleCardButton = document.querySelector(".shuffle-button");
 
 shuffleCardButton.addEventListener('click', function() {
 
-  if (typeof nameActiveAncients !== 'undefined' && typeof valueActiveDifficulty !== 'undefined') {    
+  if (typeof nameActiveAncients !== 'undefined' && typeof valueActiveDifficulty !== 'undefined') {       
     shuffleCard();
   } else if (typeof nameActiveAncients !== 'undefined' && typeof valueActiveDifficulty === 'undefined') {
     alert('вы не выбрали уровень сложности');
@@ -339,7 +343,7 @@ for (let item of items) {
     item.classList.add('active');
     getStageAndColor();
     trackerValuesAncient();
-    deck.style.backgroundImage = "url(./assets/mythicCardBackground.png)";
+    deck.style.backgroundImage = "";
     lastCard.style.backgroundImage = "";
     currentState.innerHTML = "";    
   })  
@@ -358,6 +362,7 @@ for (let number of numbers) {
     difficulty();
     nullStColor();
     currentState.innerHTML = "";
+    deck.style.backgroundImage = "";
   })  
 }
 
@@ -368,35 +373,35 @@ deck.addEventListener('click', function() {
 
   if (stage3Array.length > 0) {
 
-  if (stage1Array.length > 0) {
+        if (stage1Array.length > 0) {
 
-    url = stage1Array[stage1Array.length-1].cardFace;
+          url = stage1Array[stage1Array.length-1].cardFace;
 
-    lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;    
+          lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;    
 
-    stage1Array.pop();
+          stage1Array.pop();
 
-    stageValuesAtArray();
+          stageValuesAtArray();
 
-  } else if (stage2Array.length > 0) {
-    url = stage2Array[stage2Array.length-1].cardFace;
-    lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
-    stage2Array.pop();
-    stageValuesAtArray();
-  } else if (stage3Array.length > 1) {
-    url = stage3Array[stage3Array.length-1].cardFace;
-    lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
-    stage3Array.pop();
-    stageValuesAtArray();
-  } else if (stage3Array.length = 1) {
-    url = stage3Array[stage3Array.length-1].cardFace;
-    deck.style.backgroundImage = "";
-    lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
-    stage3Array.pop();
-    stageValuesAtArray();
-  } else {
-    lastCard.style.backgroundImage = "";
-  }
+        } else if (stage2Array.length > 0) {
+          url = stage2Array[stage2Array.length-1].cardFace;
+          lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
+          stage2Array.pop();
+          stageValuesAtArray();
+        } else if (stage3Array.length > 1) {
+          url = stage3Array[stage3Array.length-1].cardFace;
+          lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
+          stage3Array.pop();
+          stageValuesAtArray();
+        } else if (stage3Array.length = 1) {
+          url = stage3Array[stage3Array.length-1].cardFace;
+          deck.style.backgroundImage = "";
+          lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
+          stage3Array.pop();
+          stageValuesAtArray();
+        } else {
+          lastCard.style.backgroundImage = "";
+        }
       
 }
 
