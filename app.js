@@ -319,6 +319,7 @@ shuffleCardButton.addEventListener('click', function() {
 
 //кнопка для запуска замешивания карт, запускающая действия после выбора параметров
 function shuffleCard() {
+  console.log('\n*********************** новая игра **********************');
   randomCards(); //перемешиваем карты
   cleanCard();
   stageArrayNormal(); //заполняем массивы уровней конкретными картами
