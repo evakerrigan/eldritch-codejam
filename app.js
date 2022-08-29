@@ -24,6 +24,9 @@ let lastCard = document.querySelector(".last-card");
 let currentState = document.querySelector(".current-state");
 
 function nullStColor() {
+  console.log('%cMyProject%cline:26%cобнуление всего и новый перезапуск рассчетов', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px')
 
   console.log('0 nullStColor //обнуляем 9 переменных');
 
@@ -53,49 +56,49 @@ console.log('5 stageArrayNormal //заполняем массивы уровне
 
   stage1Array = stage1ArrayBrown.concat(stage1ArrayBlue, stage1ArrayGreen);  
 
-  console.log('%cMyProject%cline:24%cgreen1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', green1)
-  console.log('%cMyProject%cline:24%cbrown1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', brown1)
-  console.log('%cMyProject%cline:24%cblue1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', blue1)
+  // console.log('%cMyProject%cline:24%cgreen1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', green1)
+  // console.log('%cMyProject%cline:24%cbrown1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', brown1)
+  // console.log('%cMyProject%cline:24%cblue1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(95, 92, 51);padding:3px;border-radius:2px', blue1)
 
-  console.log('%cMyProject%cline:24%crandomGreenCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomGreenCards.length)
-  console.log('%cMyProject%cline:24%crandomBrownCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomBrownCards.length)
-  console.log('%cMyProject%cline:24%crandomBlueCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomBlueCards.length)
+  // console.log('%cMyProject%cline:24%crandomGreenCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomGreenCards.length)
+  // console.log('%cMyProject%cline:24%crandomBrownCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomBrownCards.length)
+  // console.log('%cMyProject%cline:24%crandomBlueCards.length', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(161, 23, 21);padding:3px;border-radius:2px', randomBlueCards.length)
 
-  console.log('%cMyProject%cline:21%crandomGreenCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-  console.log('%cMyProject%cline:21%crandomBrownCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-  console.log('%cMyProject%cline:21%crandomBlueCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
+  // console.log('%cMyProject%cline:21%crandomGreenCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
+  // console.log('%cMyProject%cline:21%crandomBrownCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
+  // console.log('%cMyProject%cline:21%crandomBlueCards-st1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
 
-  console.log('%cMyProject%cline:24%cstage1ArrayGreen', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayGreen)
-  console.log('%cMyProject%cline:24%cstage1ArrayBrown', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayBrown)
-  console.log('%cMyProject%cline:24%cstage1ArrayBlue', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayBlue)
+  // console.log('%cMyProject%cline:24%cstage1ArrayGreen', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayGreen)
+  // console.log('%cMyProject%cline:24%cstage1ArrayBrown', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayBrown)
+  // console.log('%cMyProject%cline:24%cstage1ArrayBlue', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', stage1ArrayBlue)
 
-  console.log('%cMyProject%cline:33%cstage1Array', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(178, 190, 126);padding:3px;border-radius:2px', stage1Array)
+  // console.log('%cMyProject%cline:33%cstage1Array', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(178, 190, 126);padding:3px;border-radius:2px', stage1Array)
 
   let stage2ArrayBrown = (JSON.parse(JSON.stringify(randomBrownCards))).splice(0, brown2);
   randomBrownCards.splice(0, brown2);
@@ -131,15 +134,15 @@ function stageValuesAtArray() {
     if (el.color === 'brown') {st1brown1 = st1brown1 + 1};
     if (el.color === 'blue') {st1blue1 = st1blue1 + 1};
   });
-  console.log('%cMyProject%cline:88%cst1green1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1green1)
-  console.log('%cMyProject%cline:88%cst1brown1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1brown1)
-  console.log('%cMyProject%cline:88%cst1blue1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1blue1)
+  // console.log('%cMyProject%cline:88%cst1green1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1green1)
+  // console.log('%cMyProject%cline:88%cst1brown1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1brown1)
+  // console.log('%cMyProject%cline:88%cst1blue1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  // 'color:#fff;background:rgb(1, 77, 103);padding:3px;border-radius:2px', st1blue1)
 
   stage2Array.forEach((el) => {
     if (el.color === 'green') {st2green2 = st2green2 + 1};
@@ -291,19 +294,39 @@ function cleanCard() {
 
     console.log('2A cleanCard //выбран уровень veryeasy');
 
-    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "hard");
-    randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "hard");
-    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "hard");
+    // let greenAdd = Array.from(randomGreenCards);
+    // greenAdd = greenAdd.filter((card) => card.difficulty === "normal");
+    // greenAdd.splice(0, greenAdd.length - 1);
+    // console.log('%cMyProject%cline:296%cgreenAdd', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+    // 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+    // 'color:#fff;background:rgb(254, 67, 101);padding:3px;border-radius:2px', greenAdd)
 
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
+    //randomGreenCards = randomGreenCards.filter((card) => card.difficulty === "easy");
+    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "hard");
+    //randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "normal");
+
+    //randomGreenCards = randomGreenCards.concat(greenAdd);
+
+  //  let randomBrownCards1 = randomBrownCards.filter((card) => card.difficulty !== "hard" && card.difficulty !== "normal");
+  //  console.log('%cMyProject%cline:313%crandomBrownCards1', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards1)
+  console.log('%cMyProject%cline:304%crandomGreenCards-розовый', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
+  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
+  'color:#fff;background:rgb(254, 67, 101);padding:3px;border-radius:2px', randomGreenCards)
+
+
+  randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "hard");
+  randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "normal");
+
+   //randomBrownCards =  JSON.parse(JSON.stringify(randomBrownCards1));
+   console.log('%cMyProject%cline:316%crandomBrownCards-розовый', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 'color:#fff;background:rgb(252, 157, 154);padding:3px;border-radius:2px', randomBrownCards)
+    // randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "normal");
+
+
+    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "hard");
+    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "normal");
+
+
+    console.log('%cMyProject%cline:304%crandomBlueCards-розовый', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 'color:#fff;background:rgb(252, 157, 154);padding:3px;border-radius:2px', randomBlueCards)
 
   } else if (valueActiveDifficulty === 'easy') {
 
