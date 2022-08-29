@@ -374,7 +374,7 @@ deck.addEventListener('click', function() {
 
         if (stage1Array.length > 0) {
 
-          console.log('цвет карты:', `${stage1Array[stage1Array.length-1].color},`, ' сложность:', `${stage1Array[stage1Array.length-1].difficulty}`);
+          console.log('id:', `${stage1Array[stage1Array.length-1].id},`, ' цвет карты:', `${stage1Array[stage1Array.length-1].color},`, ' сложность:', `${stage1Array[stage1Array.length-1].difficulty}`);
           url = stage1Array[stage1Array.length-1].cardFace;
           lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;   
           stage1Array.pop(); 
@@ -382,7 +382,7 @@ deck.addEventListener('click', function() {
 
         } else if (stage2Array.length > 0) {
 
-          console.log('цвет карты:', `${stage2Array[stage2Array.length-1].color},`, ' сложность:', `${stage2Array[stage2Array.length-1].difficulty}`);
+          console.log('id:', `${stage2Array[stage2Array.length-1].id},`, 'цвет карты:', `${stage2Array[stage2Array.length-1].color},`, ' сложность:', `${stage2Array[stage2Array.length-1].difficulty}`);
           url = stage2Array[stage2Array.length-1].cardFace;
           lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
           stage2Array.pop();
@@ -390,7 +390,7 @@ deck.addEventListener('click', function() {
 
         } else if (stage3Array.length > 1) {
 
-          console.log('цвет карты:', `${stage3Array[stage3Array.length-1].color},`, ' сложность:', `${stage3Array[stage3Array.length-1].difficulty}`);
+          console.log('id:', `${stage3Array[stage3Array.length-1].id},`, 'цвет карты:', `${stage3Array[stage3Array.length-1].color},`, ' сложность:', `${stage3Array[stage3Array.length-1].difficulty}`);
           url = stage3Array[stage3Array.length-1].cardFace;
           lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
           stage3Array.pop();
@@ -398,7 +398,7 @@ deck.addEventListener('click', function() {
 
         } else if (stage3Array.length = 1) {
 
-          console.log('цвет карты:', `${stage3Array[stage3Array.length-1].color},`, ' сложность:', `${stage3Array[stage3Array.length-1].difficulty}`);
+          console.log('id:', `${stage3Array[stage3Array.length-1].id},`, 'цвет карты:', `${stage3Array[stage3Array.length-1].color},`, ' сложность:', `${stage3Array[stage3Array.length-1].difficulty}`);
           url = stage3Array[stage3Array.length-1].cardFace;
           deck.style.backgroundImage = "";
           lastCard.style.backgroundImage = `url(./assets/MythicCards/${url}.png)`;
