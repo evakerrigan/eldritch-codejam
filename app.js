@@ -227,8 +227,6 @@ function cleanCard() {
 
   } else if (valueActiveDifficulty === 'hard') {
 
-    console.log('2A cleanCard //выбран уровень hard');
-
     randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "easy");
     randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "easy");
     randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "easy");
