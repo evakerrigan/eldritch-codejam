@@ -21,12 +21,8 @@ let stage3Array = [];
 
 let deck = document.querySelector(".deck");
 let lastCard = document.querySelector(".last-card");
-let currentState = document.querySelector(".current-state");
 
 function nullStColor() {
-
-  console.log('0 nullStColor //обнуляем 9 переменных');
-
   st1green1 = 0;
   st1brown1 = 0;
   st1blue1 = 0;
@@ -162,55 +158,24 @@ function stageValuesAtArray() {
 function randomCards() {
 
   console.log('1 randomCards //перемешиваем карты');
-  console.log('%cMyProject%cline:162%ccardsDataGreen', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(248, 214, 110);padding:3px;border-radius:2px', cardsDataGreen)
-  console.log('%cMyProject%cline:162%ccardsDatBrown', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(248, 214, 110);padding:3px;border-radius:2px', cardsDataBrown)
-  console.log('%cMyProject%cline:162%ccardsDataBlue', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-  'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-  'color:#fff;background:rgb(248, 214, 110);padding:3px;border-radius:2px', cardsDataBlue)
 
-    let с =   JSON.parse(JSON.stringify(cardsDataGreen));
-
-    shuffle(с); 
-
-    randomGreenCards = JSON.parse(JSON.stringify(с));
-
-    //randomGreenCards = c.sort(()=>Math.random()-0.5);
+    let c =   JSON.parse(JSON.stringify(cardsDataGreen));
+    randomGreenCards = c.sort(()=>Math.random()-0.5);
     console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
     'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
     'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
 
     let a =   JSON.parse(JSON.stringify(cardsDataBrown));
-    
-    shuffle(a); 
-
-    randomBrownCards = JSON.parse(JSON.stringify(a));
-
-    //randomBrownCards = a.sort(()=>Math.random()-0.5);
+    randomBrownCards = a.sort(()=>Math.random()-0.5);
     console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
     'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
     'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
 
     let b =   JSON.parse(JSON.stringify(cardsDataBlue));
-        
-    shuffle(b); 
-
-    randomBlueCards = JSON.parse(JSON.stringify(b));
-
-    //randomBlueCards = b.sort(()=>Math.random()-0.5);
+    randomBlueCards = b.sort(()=>Math.random()-0.5);
     console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
     'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
     'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-    };
 
 
 }
@@ -254,7 +219,7 @@ function trackerValuesAncient() {
   brown2 = ancientsData.find(ancient => ancient.name === nameActiveAncients).secondStage.brownCards;
   brown3 = ancientsData.find(ancient => ancient.name === nameActiveAncients).thirdStage.brownCards;
 
-  //stageArrayNormal();
+  stageArrayNormal();
 
 };
 
@@ -274,7 +239,7 @@ function difficulty() {
     } else if(activeDifficulty.classList.contains('hard')) {
       valueActiveDifficulty = 'hard';
     } else if(activeDifficulty.classList.contains('veryhard')) {
-      valueActiveDifficulty = 'veryhard';      
+      valueActiveDifficulty = 'veryhard';
     }
 
     console.log('%cMyProject%cline:94%cvalueActiveDifficulty', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
@@ -283,106 +248,14 @@ function difficulty() {
 
 }
 
-//очищаем массив карт для выбранного уровня сложности
-function cleanCard() {
-  console.log('2A cleanCard //очищаем массив карт для выбранного уровня сложности');
-
-  if (valueActiveDifficulty === 'veryeasy') {
-
-    console.log('2A cleanCard //выбран уровень veryeasy');
-
-    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "hard");
-    randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "hard");
-    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "hard");
-
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-  } else if (valueActiveDifficulty === 'easy') {
-
-    console.log('2A cleanCard //выбран уровень easy');
-
-    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "hard");
-    randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "hard");
-    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "hard");
-
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-  }  else if (valueActiveDifficulty === 'normal') {
-
-    console.log('2A cleanCard //выбран уровень normal');
-
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-  } else if (valueActiveDifficulty === 'hard') {
-
-    console.log('2A cleanCard //выбран уровень hard');
-
-    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "easy");
-    randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "easy");
-    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "easy");
-
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-  } else if (valueActiveDifficulty === 'veryhard') {
-
-    console.log('2A cleanCard //выбран уровень veryhard');
-
-    randomGreenCards = randomGreenCards.filter((card) => card.difficulty !== "easy");
-    randomBrownCards = randomBrownCards.filter((card) => card.difficulty !== "easy");
-    randomBlueCards = randomBlueCards.filter((card) => card.difficulty !== "easy");
-
-    console.log('%cMyProject%cline:21%crandomGreenCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomGreenCards)
-    console.log('%cMyProject%cline:21%crandomBrownCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBrownCards)
-    console.log('%cMyProject%cline:21%crandomBlueCards', 'color:#fff;background:#ee6f57;padding:3px;border-radius:2px', 
-    'color:#fff;background:#1f3c88;padding:3px;border-radius:2px', 
-    'color:#fff;background:rgb(114, 83, 52);padding:3px;border-radius:2px', randomBlueCards)
-
-  }
-
-}
-
-
+//
 
 //вывод трекера на страницу визуальный
 function viewTrackerAtHTML() {
 
-  console.log('7 viewTrackerAtHTML //вывод трекера на страницу визуальный');  
+  console.log('7 viewTrackerAtHTML //вывод трекера на страницу визуальный');
+
+  let currentState = document.querySelector(".current-state");
 
   currentState.innerHTML = "";
 
@@ -416,35 +289,8 @@ function viewTrackerAtHTML() {
   
   `;
 
+
 };
-
-//слушаем клик на кнопке "замешать колоду"
-let shuffleCardButton = document.querySelector(".shuffle-button");
-
-shuffleCardButton.addEventListener('click', function() {
-
-  if (typeof nameActiveAncients !== 'undefined' && typeof valueActiveDifficulty !== 'undefined') {    
-    shuffleCard();
-  } else if (typeof nameActiveAncients !== 'undefined' && typeof valueActiveDifficulty === 'undefined') {
-    alert('вы не выбрали уровень сложности');
-  } else if (typeof nameActiveAncients === 'undefined' && typeof valueActiveDifficulty !== 'undefined') {
-    alert('вы не выбрали древнего');
-  }
-
-
- 
-});
-
-//кнопка для запуска замешивания карт, запускающая действия после выбора параметров
-function shuffleCard() {
-  randomCards(); //перемешиваем карты
-  cleanCard();
-  stageArrayNormal(); //заполняем массивы уровней конкретными картами
-  stageValuesAtArray(); //рассчитываем в полученном массиве для стейджей, сколько каких карт по цветам
-  deck.style.backgroundImage = "url(./assets/mythicCardBackground.png)";
-  lastCard.style.backgroundImage = "";
-
-}
 
 
 //слушаем клик по карте древнего
@@ -458,13 +304,12 @@ for (let item of items) {
       items[i].classList.remove('active');
     }  
     item.classList.add('active');
-    //randomCards();
+    randomCards();
     getStageAndColor();
     trackerValuesAncient();
     deck.style.backgroundImage = "url(./assets/mythicCardBackground.png)";
     lastCard.style.backgroundImage = "";
-    //viewTrackerAtHTML();
-    currentState.innerHTML = "";    
+    //viewTrackerAtHTML();    
   })  
 }
 
@@ -479,8 +324,6 @@ for (let number of numbers) {
     }  
     number.classList.add('active');
     difficulty();
-    nullStColor();
-    currentState.innerHTML = "";
   })  
 }
 
