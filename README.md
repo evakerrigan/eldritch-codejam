@@ -1,5 +1,7 @@
 # Eldritch Horror Codejam
 
+Ссылка на Deploy приложения https://evakerrigan.github.io/eldritch-codejam/
+
 ## Описание проекта
 В рамках данного CodeJam необходимо будет создать небольшое приложение-хелпер для настольной игры "Древний Ужас"
 
